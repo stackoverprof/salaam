@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from '../Form';
 import PrayerTime from '../PrayerTime';
 import SearchBox from '../SearchBox';
+import HeadOrbit from '../HeadOrbit';
 
 
 export default class Index extends Component {
@@ -88,6 +89,7 @@ export default class Index extends Component {
     render() {
         return (
             <div>
+                <HeadOrbit />
                 <SearchBox buttonLabel={"Change City"} findCityCode={this.findCityCode} updateCityCode={this.updateCityCode} result={this.state.citylist}/>
                 <Form getSchedule={this.getSchedule} />
                 <PrayerTime cityname={this.state.cityname}
